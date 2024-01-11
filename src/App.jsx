@@ -12,6 +12,8 @@ function App() {
     .then((res)=>{
       console.log(res.data.fact)
       setCatFact(res.data.fact)
+    }).catch((err)=>{
+      console.log( err )
     })
   }
 
@@ -21,8 +23,8 @@ function App() {
 
   return (
     <div className="App">
-      <button onClick={changeFact}>Change fact</button>
       <p>{catFact}</p>
+      <button onClick={changeFact}>Change fact</button>
     </div>
   );
 }
